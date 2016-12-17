@@ -2,6 +2,19 @@
 // Initialize Session
 session_start();
 
+echo '
+<!DOCTYPE html>
+<html>
+
+<head>
+   <link rel="stylesheet" href="game.css">
+</head>
+
+<body>
+';
+
+
+
  echo  "<h1>User: " . $_SESSION['login_user'] . "</h1>";
 
 $score = 0;
@@ -52,7 +65,7 @@ if (isset($_POST['snapeKiller'])) {
       $score++;
    }
    
-   if (strcmp($answer8, "6") == 0) {
+   if (strcmp($answer8, "7") == 0) {
       $score++;
    }
    
@@ -71,7 +84,7 @@ if (isset($_POST['snapeKiller'])) {
 
 
 // Display the current users' score 
- echo '<h1>Your current score is: ' . $score . '<h1>';
+ echo '<h1>Your current score is: ' . $score . '</h1>';
  
  
 // Display a table of scores
@@ -80,7 +93,7 @@ $result = $conn->query($sql);
  
 if ($result->num_rows > 0) {
    echo '
-   <table>
+   <table id="scoreTable">
       <tr>
          <th>Username</th>
          <th>Score</th>
@@ -103,9 +116,13 @@ if ($result->num_rows > 0) {
 
 $conn->close();
  
- 
+
 
 ?>
-
-
-<b id="logout"><a href="logout.php">Log Out</a></b>
+<div id="endButtons">
+<a href="game.php" class="button" id="retryButton">Retry</a>
+<a href="logout.php" class="button" id="logOutButton">Log Out</a>
+</div>
+   </body>
+   </html>
+ 

@@ -97,11 +97,11 @@
                 <input type="radio" name="teacher" value="5">5</input>
             </dd>
             <dd>
-                <input type="radio" name="teacher" value="6">6</input>
+                <input type="radio" name="teacher" value="7">7</input>
             </dd>
         </dl>
 
-        <input type="submit">
+        <input type="submit" class="theButton">
     </form>
 
 </body>

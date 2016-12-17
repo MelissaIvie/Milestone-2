@@ -87,14 +87,25 @@ if(isset($_POST['username'])){
             }
         ?>    
           <form action="" method="post">
-                <label>UserName :</label>
-                <input id="name" name="username" placeholder="username" type="text"><br/>
-                <label>Password :</label>
-                <input id="password" name="password" placeholder="**********" type="password"><br/>
-                 <label>Type PasswordAgain :</label>
-                <input id="repeatPassword" name="repeatPassword" placeholder="**********" type="password"><br/>
-                <input name="submit" type="submit" value=" Add User ">
-            
+                <div class="centerDiv">
+                <table>
+                <tr><td><label>Username :</label></td>
+                <td><input id="name" name="username" placeholder="username" type="text"></td>
+                </tr>
+                <tr>
+                <td><label>Password :</label></td>
+                <td><input id="password" name="password" placeholder="**********" type="password"></td>
+                </tr>
+                <tr>
+                 <td><label>Type Password Again :</label></td>
+                <td><input id="repeatPassword" name="repeatPassword" placeholder="**********" type="password"></td>
+                </tr>
+                <tr>
+                <td><input name="submit" type="submit" value=" Add User " class="theButton"></td>
+                <td>           <a href="index.php" class="button">Cancel</a></td>
+                </tr>
+                </table>
+              </div>
             </form>
             
     </body>

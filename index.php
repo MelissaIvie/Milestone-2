@@ -17,31 +17,39 @@ if(isset($_SESSION['login_user'])){
 </head>
 
 <body>
-    <h1>Melissa's Fabulous Game</h1>
-    <div id="main">
+    
+    <div class="centerDiv" id="login">
+        <h1>Melissa's Fabulous Game</h1>
         <?php
             if ($error != '') {
                 echo '<div class="error">' . $error . "<div>";
             }
         ?>    
        
-        <div id="login">
-            <h2>Login Form</h2>
+        <div id="form">
+            <h2>Login to Your Account</h2>
             <form action="" method="post">
-                <ul>
-                <li><label>Username :</label>
-                <input id="name" name="username" placeholder="username" type="text"></li>
-                <li><label>Password :</label>
-                <input id="password" name="password" placeholder="**********" type="password"></li>
-                <li><input name="submit" type="submit" value=" Login "></li>
-                </ul>
+                <table>
+                    <tr>
+                        <td><label>Username :</label></td>
+                        <td><input id="name" name="username" placeholder="username" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td><label>Password :</label></td>
+                        <td><input id="password" name="password" placeholder="**********" type="password"></td>
+                    </tr>
+                    <tr>
+                        <td><input name="submit" type="submit" value=" Login " class="theButton"></td>
+                        <td></td>
+                    </tr>
+                </table>
             </form>
         </div>
+        <div>
+           <a href="addNewUser.php" class="button">Click here to create a new user</a>
+        </div>
     </div>
-    <div>
-       <ul> <a href="addNewUser.php">Click here to create a <button>New User</button>.</a><ul>
-         
-    </div>
+
 </body>
 
 </html>
